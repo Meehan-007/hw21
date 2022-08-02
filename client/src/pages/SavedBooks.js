@@ -5,7 +5,7 @@ import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap
 import { GET_ME} from '../utils/queries'; 
 import { REMOVE_BOOK} from '../utils/mutations'
 import Auth from '../utils/auth';
-import { removeBookId } from '../utils/localStorage';
+import { removeBookId, saveBookIds } from '../utils/localStorage';
 
 const SavedBooks = () => {
   const { loading, data } = useQuery(GET_ME);
@@ -14,7 +14,8 @@ const [removeBook] = useMutation(REMOVE_BOOK)
 
 
 
-const userData = data?.userData || [];
+const userData = data?.me || []; 
+
 console.log(userData);
 
 
@@ -27,9 +28,13 @@ console.log(userData);
     }
 
     try {
-      const response = await removeBook(bookId, token);
+      const response = await removeBook({ 
+        variables: { 
+          bookId: bookId
+        },
+      });
 
-      if (!response.ok) {
+      if (!response) {
         throw new Error('something went wrong!');
       }
 
