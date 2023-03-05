@@ -1,18 +1,27 @@
-# Apex Smoothies
+#Book App 
 
-## Description
-Apex Smoothies is a health-focused smoothie bar that wanted an app to expand their presence and branding. I developed an app that allows users to explore the menu and learn about the nutritional information of each smoothie. The source code is available to everyone under the standard MIT license.
+##Description 
 
-## Deployment:
+The Book App is a web application that allows users to search for any book using a third-party API from Google. With a simple search, users can find information about any book they want, including the title, author, and description.
 
-## Code and Technologies:
-The app is built using Node.js, Sequelize, Express.js, and React.
+##Deployment 
 
-## Licenses:
+The app is deployed at https://book-powers-4us.herokuapp.com/.
+
+##Code and Technologies 
+
+The app is built using Node.js, Mongoose, Express.js, and React.
+
+##Licenses 
+
 The source code is licensed under the MIT license.
 
-## Features:
-In the future, I plan to add a payment portal that will allow users to purchase smoothies online and pick them up in-store. This feature will enhance the user experience and provide a more convenient way for customers to buy smoothies. 
+##Features 
 
-## Contact:
+The Book App's main feature is its ability to search for any book using the Google Books API. Users can enter a book's title, author, or keywords, and the app will return a list of matching books. Each book in the list includes a thumbnail image, title, author, and a brief description. Users can also click on a book to view more detailed information about it.
+
+In addition to searching for books, users can sign up with a secure login using bcrypt. Once signed in, they can save books to their "saved books" list and remove books from the list.
+
+##Contact 
+
 For any inquiries or support, please contact Patrick Meehan at Meehan.007@hotmail.com. My GitHub handle is Meehan-007.
